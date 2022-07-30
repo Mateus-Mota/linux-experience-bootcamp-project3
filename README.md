@@ -1,4 +1,4 @@
-# linux-iac-bootcamp-project2
+# linux-iac-bootcamp-project3
 
 3° projeto do bootcamp Linux Experience.
 
