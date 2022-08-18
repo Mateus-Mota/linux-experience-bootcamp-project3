@@ -15,6 +15,8 @@ Implementar uma estrutura de Microsserviços com as melhores práticas do mercad
 - Git
 - Php
 - Docker
+- MySQL
+- Nginx
 
 <br>
 
@@ -26,12 +28,22 @@ git clone https://github.com/Mateus-Mota/linux-experience-bootcamp-project3.git
 cd linux-experience-bootcamp-project3
 ~~~
 
+### Inice o container do Mysql
+~~~shell
+docker run --name Nginx
+~~~
+
+### Inicie o container do Nginx
+~~~shell
+docker run --name Nginx
+~~~
+
 ### Caso queira iniciar um único containner
 ~~~shell
-docker run --name web-server -dt -p 80:80 --mount type=volume,src=app,dst=/app/ webdevops/php-apache:alpine-php7
+docker run --name web-server-php -dt -p 80:80 --mount type=volume,src=app,dst=/app/ webdevops/php-apache:alpine-php7
 ~~~
 
 ### Caso queria iniciar múltiplos containers utilizando o Docker Swarm
 ~~~shell
-docker service create --name web-server --replicas 3 -dt -p 80:80 --mount type=volume,src=app,dst=/app/ webdevops/php-apache:alpine-php7
+docker service create --name web-server-php --replicas 3 -dt -p 80:80 --mount type=volume,src=app,dst=/app/ webdevops/php-apache:alpine-php7
 ~~~
