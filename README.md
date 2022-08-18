@@ -35,6 +35,13 @@ cd linux-experience-bootcamp-project3
 $servername = "0.0.0.0";
 ~~~
 
+### Coloque os endereços IP dos servidores web no arquivo nginx.conf dentro do parâmentro upstream all {}
+~~~shell
+upstream all {
+  server ip_address:port;
+}
+~~~
+
 <br>
 
 ### :warning: Ainda em desenvolvimento :warning:
